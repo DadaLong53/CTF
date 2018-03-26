@@ -6,7 +6,7 @@ commandi
 <?php
 include("security.php");
 include("security_level_check.php");
-include("functions_external.php");
+include("functions_external.php"); /*把許多不同功能的check整理在一起*/
 include("selections.php"); /*  */
 =========================================
 function commandi($data)
@@ -48,3 +48,119 @@ function commandi($data)
  
  shell_exec("nslookup  " . commandi($target))
  
+==============================================
+selections.php
+==============================================
+<?php
+include("admin/settings.php");
+
+$bugs = file("bugs.txt");
+
+if(isset($_POST["form_bug"]) && isset($_POST["bug"]))
+{    
+    $key = $_POST["bug"]; 
+    $bug = explode(",", trim($bugs[$key]));
+
+    // Debugging
+    // print_r($bug);
+
+    header("Location: " . $bug[1]);
+
+    exit;
+   
+}
+ 
+if(isset($_POST["form_security_level"]) && isset($_POST["security_level"]))    
+{
+    $security_level_cookie = $_POST["security_level"];
+    
+    switch($security_level_cookie)
+    {
+        case "0" :
+            $security_level_cookie = "0";
+            break;
+        case "1" :
+            $security_level_cookie = "1";
+            break;
+        case "2" :
+            $security_level_cookie = "2";
+            break;
+        default : 
+            $security_level_cookie = "0";
+            break;
+    }
+
+    if($evil_bee == 1)
+    {
+        setcookie("security_level", "666", time()+60*60*24*365, "/", "", false, false);
+    }
+    else        
+    {
+        setcookie("security_level", $security_level_cookie, time()+60*60*24*365, "/", "", false, false);   
+    }
+    header("Location: " . $_SERVER["SCRIPT_NAME"]);
+    exit;
+}
+
+if(isset($_COOKIE["security_level"]))
+{
+    switch($_COOKIE["security_level"])
+    {
+        case "0" :
+            $security_level = "low";
+            break;
+        case "1" :
+            $security_level = "medium";
+            break;
+        case "2" :
+            $security_level = "high";
+            break;
+        case "666" :
+           
+            $security_level = "666";
+            break;
+        default : 
+            $security_level = "low";
+            break;
+    }
+}
+else
+{    
+    $security_level = "not set";  
+} 
+?>
+
+
+==============================================
+security.php
+==============================================
+<?php
+include("admin/settings.php");
+
+session_start();
+
+$addresses = array();
+@list($ip, $len) = explode('/', $AIM_subnet);
+
+if(($min = ip2long($ip)) !== false)
+{
+    $max = ($min | (1<<(32-$len))-1);
+    for($i = $min; $i < $max; $i++)
+    $addresses[] = long2ip($i);
+}
+
+if(in_array($_SERVER["REMOTE_ADDR"], $AIM_IPs) or in_array($_SERVER["REMOTE_ADDR"], $addresses))
+{
+    ini_set("display_errors", 0);
+    $_SESSION["login"] = "A.I.M.";
+    $_SESSION["admin"] = "1";
+}
+
+if(!(isset($_SESSION["login"]) && $_SESSION["login"]))
+{
+    header("Location: login.php");
+  
+    exit;
+}
+
+?>
