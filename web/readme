@@ -1,0 +1,46 @@
+
+Web-CTF出題與講座事項
+
+課程舉辦模式:由淺至深                         
+MyfirsyWebSecurity(HappyHackingDay) 
+---- > WebSecurity(HackingWeekend)
+---- >Topics in Web Security(臺灣好厲駭培訓+高中職戰隊選手)
+
+配套措施:                                     
+課程	對象與搭配CTF
+MyfirsyWebSecurity
+(HappyHackingDay) 	限定高中職生參與
+Web 101 +部分 web
+WebSecurity
+(HackingWeekend)	可開放部分大專生參與
+Web  + Web-II +一兩題web-III
+Topics in Web Security
+(臺灣好厲駭培訓+高中職戰隊選手)	邀請型式
+自行挑選Web + Web-II +web-III
+可帶一兩題Web-hard
+
+CTF出題                                                         
+[1]Web101(<=8題):MyfirsyWebSecurity上課要解的題目
+最基礎的練習|主要是熟悉基本知識與工具 burpsuite + curl + developer tools
+若時間許可可以講部分Web題目
+已完成除非有精彩的題型,否則本年度暫不開放出題
+
+[2]Web+WebII+webIII{107年度要強化的出題}
+HackingWeekend及臺灣好厲駭培訓用題目{WebSecurity}
+上課學員需先上過基礎的MyfirsyWebSecurity
+上課時不要全解要留部分題目給學員自行解出|分成基礎及進階|
+
+Web(10~20題):入門級OWASP top 10
+{SQLi|command line injection+LFI+fileupload vuln.+ …..}
+
+Web-II(10~20題) :進階級OWASP top 10{advanced SQLi+……}
+
+Web-III(10~20題):強調最新OWASP top 10新增漏洞項目及未列入top 10的漏洞
+例如:Insecure deserilization | XXE | SSTI
+
+[3]Web-hard: 
+只可以在進階課程示範一兩題
+主要是orange大大出的難題
+學員也鼓勵出出艱難題目
+待辦事項:建置底下題目
+https://github.com/orangetw/My-CTF-Web-Challenges
