@@ -1,0 +1,17 @@
+PyCrypt模組
+PyCrypto 是另一個密碼模組，它提供安全的雜湊函數和各種加密演算法
+支援Python 2.1到3.3
+
+安裝: pip install pycrypto
+
+範例:
+
+from Crypto.Cipher import AES
+
+# Encryption加密
+encryption_suite = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
+cipher_text = encryption_suite.encrypt("A really secret message. Not for prying eyes.")
+
+# Decryption解密
+decryption_suite = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
+plain_text = decryption_suite.decrypt(cipher_text)
