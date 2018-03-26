@@ -1,10 +1,5 @@
 
-
-radare2
-
-
-
-#degubber/disassembler@linux
+# degubber/disassembler@linux
 GDB - The GNU project debugger
 PEDA - GDB plugin (only python2.7)
 Pwndbg - A GDB plugin that provides a suite of utilities to hack around GDB easily.
