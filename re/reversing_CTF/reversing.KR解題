@@ -1,0 +1,113 @@
+
+[1]Easy ELF   L1NUX
+
+file Easy_ELF 
+
+Easy_ELF: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, 
+BuildID[sha1]=0x409edb8e3182380a2f58d49c7323dd895c74e1b7, stripped
+
+
+
+[1]Easy Crack
+
+直接拖到ida，shift+f12查看字串，定位關鍵函數
+
+Ea5yR3versing    
+
+[2]Easy Keygen  flag:K3yg3nm3
+
+------------------------------------------------------------------
+serial = '5B134977135E7D13'
+name = ''
+
+for i in xrange(0, len(serial), 2):
+ name += chr(int(serial[i:i+2], 16) ^ (16 * (i / 2 % 3 + 1)))
+
+print name
+------------------------------------------------------------------
+
+
+
+http://blog.yyx.me/posts/reversing-kr-4-easy-challenges.html
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void main(void)
+{
+    char num[3] = {0x10, 0x20, 0x30};
+    char* name = "abcde";
+    int len = strlen(name) * 2 + 1;
+    char* serial = new char[len];
+    memset(serial, 0, len);
+
+    for(int i = 0, j = 0; j < strlen(name); i++, j++)
+    {
+        if(i >= 3)
+            i = 0;
+        sprintf(serial, "%s%02x", serial, *(name + j) ^ num[i]);
+    }
+
+    cout<<serial<<endl;
+}
+
+---------------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+
+void main(void)
+{
+    char num[3] = {0x10, 0x20, 0x30};
+    char* serial = "7142537445";
+    int len = strlen(serial) / 2 + 1;
+    char* name = new char[len];
+    memset(name, 0, len);
+
+    for(int i = 0, j = 0; j < strlen(serial); i++, j = j + 2)
+    {
+        if(i >= 3)
+            i = 0;
+
+        char serial_str[3];
+        serial_str[0] = *(serial + j);
+        serial_str[1] = *(serial + j + 1);
+        serial_str[2] = '\0';
+
+        sprintf(name, "%s%c", name, strtol(serial_str, NULL, 16) ^ num[i]);
+    }
+
+    cout<<name<<endl;
+}
+
+
+Easy Crack
+Easy Keygen
+Easy Unpack
+Music Player
+Replace
+ImagePrc
+Position
+Direct3D FPS
+Ransomware
+Twist1
+Easy ELF
+WindowsKernel
+AutoHotkey1
+CSHOP
+PEPassword
+HateIntel
+SimpleVM
+AutoHotkey2
+x64 Lotto
+CSHARP
+Flash Encrypt
+MetroApp
+CRC1
+Multiplicative
+CRC2
+Adventure
+CustomShell
+
+ 
