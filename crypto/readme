@@ -1,0 +1,22 @@
+
+# python tools and packages
+Pycrypto
+
+# Crypto Tools used for solving Crypto challenges
+
+FeatherDuster - An automated, modular cryptanalysis tool
+Hash Extender - A utility tool for performing hash length extension attacks
+PkCrack - A tool for Breaking PkZip-encryption
+RSACTFTool - A tool for recovering RSA private key with various attack
+RSATool - Generate private key with knowledge of p and q
+XORTool - A tool to analyze multi-byte xor cipher
+
+# 密碼破解 Bruteforcers
+Tools used for various kind of bruteforcing (passwords etc.)
+
+Hashcat - Password Cracker
+John The Jumbo - Community enhanced version of John the Ripper
+John The Ripper - Password Cracker
+Nozzlr - Nozzlr is a bruteforce framework, trully modular and script-friendly.
+Ophcrack - Windows password cracker based on rainbow tables.
+Patator - Patator is a multi-purpose brute-forcer, with a modular design.
