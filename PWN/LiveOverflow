@@ -1,0 +1,107 @@
+
+LiveOverflow Channel Introduction and Backstory - bin 0x00
+
+Introduction to Linux - Installation and the Terminal - bin 0x01
+
+Writing a simple Program in C - bin 0x02
+
+env | grep PATH
+
+echo $PATH
+
+export PATH=
+
+sudo apt-get install vim
+
+Writing a simple Program in Python - bin 0x03
+
+How a CPU works and Introduction to Assembler - bin 0x04
+https://www.youtube.com/watch?v=6jSKldt7Eqs&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=5
+
+======================================================================================================
+
+Reversing and Cracking first simple Program - bin 0x05
+https://github.com/LiveOverflow/liveoverflow_youtube/blob/master/0x05_simple_crackme_intro_assembler/license_1.c
+----------------------------------------------------------
+#include <string.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+        if(argc==2) {
+		printf("Checking License: %s\n", argv[1]);
+		if(strcmp(argv[1], "AAAA-Z10N-42-OK")==0) {
+//			printf("Access Granted!\n");
+        printf("This is yout flag: BreakALLCTF{C0ng@y0ur have done a g00d j0B@}\n");
+		} else {
+			printf("WRONG!\n");
+		}
+	} else {
+		printf("Usage: <key>\n");
+	}
+	return 0;
+}
+----------------------------------------------------------
+gdb license_1 
+(gdb) set disassembly-flavor intel
+(gdb) disassemble main
+
+查看組合語言
+查看看puts
+找字串比較
+ 0x0000000000400602 <+69>:	call   0x4004b0 <strcmp@plt>
+ 
+ set $eax=0
+ info registers
+ 
+ Simple Tools and Techniques for Reversing a binary - bin 0x06
+ 
+ man ascii
+使用hexdump 看看字串  hexdump -c XXXXXx
+使用strings 看看字串  strings XXXXXx
+使用objdump看看字串  objdump -d XXXXXx
+使用gdb看看字串  
+  設breakpoint
+  info registers
+  x/s 位址---->可看到字串
+  
+man syscalls
+strace XXXXX
+strace XXXXX AAAA
+ltrace xxxx ====>trace lib function
+ltrace XXXXX AAAA
+
+使用hopper==>如果你是用hopper
+使用ida pro==>很貴
+使用radare2==>
+https://github.com/radare/radare2
+
+git clone https://github.com/radare/radare2.git
+cd radare2
+./sys/install.sh
+
+r2 XXXXXX
+aaa
+afl
+?
+a?
+$ s
+$ sys
+$ sys.main
+pdf
+VV    tab   shift-tab  shift-hjkl  p  shift-r  使用:來下指令
+
+:dc ---->run the program
+
+r2 -d XXXXXX
+
+db ---> breakpoint
+
+=========================================
+
+Uncrackable Programs? Key validation with Algorithm and creating a Keygen - Part 1/2 - bin 0x07
+
+
+he Heap: How to exploit a Heap Overflow - bin 0x15
+https://www.youtube.com/watch?v=TfJrU95q1J4
+覆寫 GOT puts來redirect code
+strcpy漏洞
