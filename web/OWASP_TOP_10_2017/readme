@@ -1,0 +1,29 @@
+
+https://www.ithome.com.tw/news/118411
+
+2017年版：  
+https://read01.com/DGzk463.html#.Wrlpcy5uaUk
+A1：2017 – Injection（注入攻擊）
+A2：2017 – 失效的身份認證
+A3：2017 – 敏感信息泄漏
+A4：2017 – XML外部實體（XXE）{NEW}
+A5：2017 – 失效的訪問控制
+A6：2017 – 安全配置錯誤
+A7：2017 – 跨站腳本（XSS）
+A8：2017 – 不安全的反序列化{NEW}
+A9：2017 – 使用含有已知漏洞的組件
+A10：2017 – 不足的日誌記錄和監控{NEW}
+
+
+2010年版：  　
+http://newsletter.ascc.sinica.edu.tw/news/read_news.php?nid=1917
+　A1 – Injection（注入攻擊） 
+　A2 – Cross Site Scripting (XSS)（跨站腳本攻擊） 
+　A3 – Broken Authentication and Session Management（身分驗證功能缺失） 
+　A4 – Insecure Direct Object References（不安全的物件參考） 
+　A5 – Cross Site Request Forgery (CSRF)（跨站冒名請求） 
+　A6 – Security Misconfiguration（安全性設定疏失） 
+　A7 – Failure to Restrict URL Access（限制URL存取失敗） 
+　A8 – Unvalidated Redirects and Forwards（未驗證的導向） 
+　A9 – Insecure Cryptographic Storage（未加密的儲存設備）  
+　A10 – Insufficient Transport Layer Protection（傳輸層保護不足） 
