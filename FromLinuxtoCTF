@@ -1,0 +1,42 @@
+FromLinuxtoCTF
+上課順序
+
+[1]資安宣言與講師|計畫介紹(<=10分鐘)
+
+[2]CTF介紹(<=10分鐘)
+先請學生登入CTF平台
+再快速講解CTF介紹
+
+[3]CTF實戰(1小時)
+先講簡單題
+
+[編碼][一定要講] 只要講實測不要講理論
+    base 64 + Ascii  + morse code
+
+[crypto]
+ABCTF 2016 : ceasar-salad-10{凱薩密碼破解|使用線上工具} 
+Pico CTF 2014 : Substitution頻率分析
+EKOPARTY CTF 2015: SCYTCRYPTO{密碼棒}
+
+web[有時間再講]
+
+逆向[最後再看看要不要講]:前三題
+
+[4]Linux(1~1.5小時)
+快速講解linux
+重點1:linux創造者
+重點2:核心與發行版本(dictributions)
+重點3:Shell
+重點4:目錄架構
+
+lab 1:簡單指令pwd / cd /cat 實作
+cd /bin
+pwd
+cat /etc/passwd
+
+lab2:指令參數ls  vs ls -AL  vs ls -al
+
+lab3:pipeline與redirect 與grep指令練習
+
+然後就直接帶linux-CTF題目(不必全部講完)
+前六題一定要講
