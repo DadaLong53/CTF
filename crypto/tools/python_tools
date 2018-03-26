@@ -1,0 +1,22 @@
+pycrypto
+
+[1]pycrypto
+pycrypto是用Python寫的加解密套件。
+
+This is a collection of both secure hash functions (such as SHA256 and RIPEMD160), 
+and various encryption algorithms (AES, DES, RSA, ElGamal, etc.).
+
+https://pypi.python.org/pypi/pycrypto
+
+【安裝Installation】
+
+[1]下載pycrypto的最新版本
+位址為：https://pypi.python.org/pypi/pycrypto
+
+[2]安裝
+you can simply run "python setup.py build" to build the package, and "python setup.py install" to install it.
+
+python setup.py build
+
+python setup.py install
+
